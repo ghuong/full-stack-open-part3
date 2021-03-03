@@ -4,6 +4,7 @@
 
 - [About](#about)
 - [Getting Started](#getting_started)
+- [Usage](#usage)
 
 ## About <a name = "about"></a>
 
@@ -22,6 +23,16 @@ To run the code, you will need to install node.js. On a Mac, the easiest method 
 ```bash
 brew install node
 ```
+
+## Usage <a name = "usage"></a>
+
+To run server:
+
+`npm start`
+
+To run, and have server auto-restart on file change during development:
+
+`npm run dev`
 
 ## Built With
 
