@@ -4,8 +4,16 @@
   "description": "Full Stack Open 2021 - Part 3 Exercises",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Gary Huong",
-  "license": "CC"
+  "license": "CC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
 }
