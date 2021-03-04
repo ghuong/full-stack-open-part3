@@ -8,10 +8,37 @@ Content-Type: application/json
 
 ###
 
-// Bad request
+// Number is missing
 POST http://localhost:3001/api/persons
 Content-Type: application/json
 
 {
   "name": "Joe Schmoe"
 }
+
+###
+
+// Name is missing
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "number": "522342"
+}
+
+###
+
+// Name already exists
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "Arto Hellas",
+  "number": "999-999-9999"
+}
+
+###
+
+// No body
+POST http://localhost:3001/api/persons
+Content-Type: application/json
