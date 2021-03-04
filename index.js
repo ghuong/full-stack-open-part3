@@ -4,7 +4,7 @@ const app = express();
 // activate express' json-parser
 app.use(express.json());
 
-const persons = [
+let persons = [
   {
     name: "Arto Hellas",
     number: "040-123456",
@@ -34,7 +34,7 @@ app.get("/api/persons", (request, response) => {
 app.get("/api/persons/:id", (request, response) => {
   const id = Number(request.params.id);
   const person = persons.find((person) => person.id === id);
-  
+
   if (person) {
     response.json(person);
   } else {
@@ -46,6 +46,12 @@ app.get("/info", (request, response) => {
   const timestamp = new Date();
   const info = `<div>Phonebook has info for ${persons.length} people</div><br /><div>${timestamp}</div>`;
   response.send(info);
+});
+
+app.delete("/api/persons/:id", (request, response) => {
+  const id = Number(request.params.id);
+  persons = persons.filter((person) => person.id !== id);
+  response.status(204).end();
 });
 
 const PORT = 3001;
