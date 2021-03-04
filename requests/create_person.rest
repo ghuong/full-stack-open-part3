@@ -1,0 +1,17 @@
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "Elon Musk",
+  "number": "111-222-3333"
+}
+
+###
+
+// Bad request
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "Joe Schmoe"
+}
