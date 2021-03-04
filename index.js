@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 
-// activate express' json-parser
+// activate express' json-parser middleware
 app.use(express.json());
 
 let persons = [
