@@ -4,6 +4,10 @@ const app = express();
 // activate express' json-parser middleware
 app.use(express.json());
 
+// use morgan middleware
+const morgan = require("morgan");
+app.use(morgan("tiny"));
+
 let persons = [
   {
     name: "Arto Hellas",
