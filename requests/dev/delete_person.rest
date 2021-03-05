@@ -1,0 +1,2 @@
+// Delete Elon Musk
+DELETE https://nameless-citadel-72320.herokuapp.com/api/persons/5

@@ -2,9 +2,14 @@
 
 ## Table of Contents
 
+- [Heroku](#heroku)
 - [About](#about)
 - [Getting Started](#getting_started)
 - [Usage](#usage)
+
+## Heroku <a name = "heroku"></a>
+
+This app has been deployed to heroku: [Heroku App](https://nameless-citadel-72320.herokuapp.com/)
 
 ## About <a name = "about"></a>
 

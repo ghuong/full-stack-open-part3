@@ -1,0 +1,44 @@
+POST https://nameless-citadel-72320.herokuapp.com/api/persons
+Content-Type: application/json
+
+{
+  "name": "Elon Musk",
+  "number": "111-222-3333"
+}
+
+###
+
+// Number is missing
+POST https://nameless-citadel-72320.herokuapp.com/api/persons
+Content-Type: application/json
+
+{
+  "name": "Joe Schmoe"
+}
+
+###
+
+// Name is missing
+POST https://nameless-citadel-72320.herokuapp.com/api/persons
+Content-Type: application/json
+
+{
+  "number": "522342"
+}
+
+###
+
+// Name already exists
+POST https://nameless-citadel-72320.herokuapp.com/api/persons
+Content-Type: application/json
+
+{
+  "name": "Arto Hellas",
+  "number": "999-999-9999"
+}
+
+###
+
+// No body
+POST https://nameless-citadel-72320.herokuapp.com/api/persons
+Content-Type: application/json
