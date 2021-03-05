@@ -1,1 +1,11 @@
-GET http://localhost:3001/api/persons/1
+GET http://localhost:3001/api/persons/604293d97caf0eb675ccd75c
+
+###
+
+// Malformatted id
+GET http://localhost:3001/api/persons/blahblah
+
+###
+
+// Non-existent person
+GET http://localhost:3001/api/persons/604293d97caf0eb675ccd75f
