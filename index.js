@@ -4,8 +4,13 @@ const app = express();
 // activate express' json-parser middleware
 app.use(express.json());
 
+// use cors middleware
+const cors = require("cors");
+app.use(cors());
+
 // use morgan middleware
 const morgan = require("morgan");
+// create custom token
 morgan.token("body", (request, response) => {
   if (request.method === "POST") {
     return JSON.stringify(request.body);
