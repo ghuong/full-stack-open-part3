@@ -1,4 +1,4 @@
-POST https://nameless-citadel-72320.herokuapp.com/api/persons
+POST http://localhost:3001/api/persons
 Content-Type: application/json
 
 {
@@ -9,7 +9,7 @@ Content-Type: application/json
 ###
 
 // Number is missing
-POST https://nameless-citadel-72320.herokuapp.com/api/persons
+POST http://localhost:3001/api/persons
 Content-Type: application/json
 
 {
@@ -19,7 +19,7 @@ Content-Type: application/json
 ###
 
 // Name is missing
-POST https://nameless-citadel-72320.herokuapp.com/api/persons
+POST http://localhost:3001/api/persons
 Content-Type: application/json
 
 {
@@ -29,7 +29,7 @@ Content-Type: application/json
 ###
 
 // Name already exists
-POST https://nameless-citadel-72320.herokuapp.com/api/persons
+POST http://localhost:3001/api/persons
 Content-Type: application/json
 
 {
@@ -40,5 +40,5 @@ Content-Type: application/json
 ###
 
 // No body
-POST https://nameless-citadel-72320.herokuapp.com/api/persons
+POST http://localhost:3001/api/persons
 Content-Type: application/json

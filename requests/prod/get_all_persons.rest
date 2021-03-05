@@ -1,1 +1,1 @@
-GET http://localhost:3001/api/persons
+GET https://nameless-citadel-72320.herokuapp.com/api/persons

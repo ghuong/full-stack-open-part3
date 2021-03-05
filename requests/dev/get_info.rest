@@ -1,1 +1,1 @@
-GET https://nameless-citadel-72320.herokuapp.com/info
+GET http://localhost:3001/info
