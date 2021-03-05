@@ -1,4 +1,3 @@
-const { json } = require("express");
 const express = require("express");
 const app = express();
 
@@ -13,7 +12,7 @@ morgan.token("body", (request, response) => {
   } else {
     return "";
   }
-})
+});
 
 app.use(
   morgan((tokens, request, response) => {
@@ -21,9 +20,11 @@ app.use(
       tokens.method(request, response),
       tokens.url(request, response),
       tokens.status(request, response),
-      tokens.res(request, response, "content-length"), "-",
-      tokens["response-time"](request, response), "ms",
-      tokens.body(request, response)
+      tokens.res(request, response, "content-length"),
+      "-",
+      tokens["response-time"](request, response),
+      "ms",
+      tokens.body(request, response),
     ].join(" ");
   })
 );
