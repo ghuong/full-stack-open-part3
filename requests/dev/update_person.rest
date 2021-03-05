@@ -1,0 +1,7 @@
+PUT http://localhost:3001/api/persons/6042938c7caf0eb675ccd75b
+Content-Type: application/json
+
+{
+  "name": "Elon Musk",
+  "number": "00010001"
+}
