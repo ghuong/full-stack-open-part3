@@ -4,6 +4,9 @@ const app = express();
 // activate express' json-parser middleware
 app.use(express.json());
 
+// use express' static build middleware
+app.use(express.static("build"));
+
 // use cors middleware
 const cors = require("cors");
 app.use(cors());
