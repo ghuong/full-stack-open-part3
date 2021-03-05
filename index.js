@@ -41,10 +41,12 @@ app.use(
 );
 
 // get all persons
-app.get("/api/persons", (request, response) => {
-  Person.find({}).then((persons) => {
-    response.json(persons);
-  });
+app.get("/api/persons", (request, response, next) => {
+  Person.find({})
+    .then((persons) => {
+      response.json(persons);
+    })
+    .catch((error) => next(error));
 });
 
 // get person
@@ -62,9 +64,13 @@ app.get("/api/persons/:id", (request, response, next) => {
 
 // get info
 app.get("/info", (request, response) => {
-  const timestamp = new Date();
-  const info = `<div>Phonebook has info for ${persons.length} people</div><br /><div>${timestamp}</div>`;
-  response.send(info);
+  Person.find({})
+    .then((persons) => {
+      const timestamp = new Date();
+      const info = `<div>Phonebook has info for ${persons.length} people</div><br /><div>${timestamp}</div>`;
+      response.send(info);
+    })
+    .catch((error) => next(error));
 });
 
 // create person
@@ -89,9 +95,12 @@ app.post("/api/persons", (request, response) => {
   });
 
   // persons = persons.concat(person);
-  person.save().then((savedPerson) => {
-    response.json(savedPerson);
-  });
+  person
+    .save()
+    .then((savedPerson) => {
+      response.json(savedPerson);
+    })
+    .catch((error) => next(error));
 });
 
 // delete person
