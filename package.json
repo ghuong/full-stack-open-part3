@@ -9,7 +9,8 @@
     "debug": "nodemon --inspect index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "git push heroku main",
-    "logs:prod": "heroku logs --tail"
+    "logs:prod": "heroku logs --tail",
+    "lint": "eslint ."
   },
   "author": "Gary Huong",
   "license": "CC",
@@ -22,6 +23,10 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
+    "eslint": "^7.21.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-import": "^2.22.1",
     "nodemon": "^2.0.7"
   }
 }

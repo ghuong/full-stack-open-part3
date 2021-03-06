@@ -57,4 +57,6 @@ switch (process.argv.length) {
   case 5:
     addPerson(process.argv[3], process.argv[4]);
     break;
+  default:
+    break;
 }
